@@ -81,6 +81,59 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav pl-2">
 
+      <!-- =================================== INQUIRY =========================================== -->
+
+<li class="nav-item dropdown" style="padding-left: 5px">
+  <a class="nav-link dropdown-toggle"
+     [routerLink]="['/#']"
+     id="navbarDropdownInquiry"
+     role="button"
+     data-toggle="dropdown"
+     aria-haspopup="true"
+     aria-expanded="false">
+    <font style="color: white">{{ "Inquiry" | translate }}</font>
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="navbarDropdownInquiry">
+    <a class="dropdown-item" [routerLink]="['/inquiry']">
+      <i class="fa fa-question-circle"></i> &nbsp;
+      {{ "Add Inquiry" | translate }}
+    </a>
+
+    <a class="dropdown-item" [routerLink]="['/inquirylist']">
+      <i class="fa fa-list"></i> &nbsp;
+      {{ "Inquiry List" | translate }}
+    </a>
+  </div>
+</li>
+
+<!-- =================================== REPORT =========================================== -->
+
+<li class="nav-item dropdown" style="padding-left: 5px">
+  <a class="nav-link dropdown-toggle"
+     [routerLink]="['/#']"
+     id="navbarDropdownReport"
+     role="button"
+     data-toggle="dropdown"
+     aria-haspopup="true"
+     aria-expanded="false">
+    <font style="color: white">{{ "Report" | translate }}</font>
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="navbarDropdownReport">
+    <a class="dropdown-item" [routerLink]="['/report']">
+      <i class="fa fa-file-alt"></i> &nbsp;
+      {{ "Add Report" | translate }}
+    </a>
+
+    <a class="dropdown-item" [routerLink]="['/reportlist']">
+      <i class="fa fa-list"></i> &nbsp;
+      {{ "Report List" | translate }}
+    </a>
+  </div>
+</li>
+
+
       <!-- =================================== SETTINGS =========================================== -->
 
       <li class="nav-item dropdown" style="padding-left: 5px">

@@ -40,6 +40,10 @@ import { CustomerComponent } from './customer/customer.component';
 import { CustomerlistComponent } from './customer/customer-list.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SettingslistComponent } from './settings/settingslist.component';
+import { ReportComponent } from './report/report.component';
+import { ReportlistComponent } from './report/reportlist.component';
+import { InquiryComponent } from './inquiry/inquiry.component';
+import { InquiryListComponent } from './inquiry/inquirylist.component';
 
 
 
@@ -53,6 +57,36 @@ const routes: Routes = [
         path: 'dashboard',
         component: DashboardComponent
     },
+
+    // **** INQUIRY ****
+
+{
+    path: 'inquiry',
+    component: InquiryComponent
+},
+{
+    path: 'inquiry/:id',
+    component: InquiryComponent
+},
+{
+    path: 'inquirylist',
+    component: InquiryListComponent
+},
+
+// ****REPORT****
+
+{
+    path: 'report',
+    component: ReportComponent
+},
+{
+    path: 'report/:id',
+    component: ReportComponent
+},
+{
+    path: 'reportlist',
+    component: ReportlistComponent
+},
 
 
     // ****SETTINGS****
