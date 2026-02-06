@@ -108,6 +108,7 @@ export function myHttpLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    PageNotFoundComponent,
 
     NavbarComponent,
     FooterComponent,
