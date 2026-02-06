@@ -44,10 +44,15 @@ import { ReportComponent } from './report/report.component';
 import { ReportlistComponent } from './report/reportlist.component';
 import { InquiryComponent } from './inquiry/inquiry.component';
 import { InquiryListComponent } from './inquiry/inquirylist.component';
+<<<<<<< HEAD
 import { ProjectComponent } from './project/project.component';
 import { ProjectlistComponent } from './project/projectlist.component';
 import { ActivityLogComponent } from './activitylog/activitylog.component';
 import { ActivityLogListComponent } from './activitylog/activityloglist.component';
+=======
+import { PageNotFoundComponent } from './page-not-found.component';
+
+>>>>>>> ea655c5f72bd99a6f853c664856159883da1a7fe
 
 
 
@@ -387,7 +392,9 @@ const routes: Routes = [
 
 
 
+{ path: '**', component: PageNotFoundComponent }
 ];
+
 
 @NgModule({
     imports: [RouterModule.forRoot(routes, { useHash: true })],
