@@ -97,6 +97,10 @@ import { ReportlistComponent } from './report/reportlist.component';
 /* ================= INQUIRY ================= */
 import { InquiryComponent } from './inquiry/inquiry.component';
 import { InquiryListComponent } from './inquiry/inquirylist.component';
+import { ProjectComponent } from './project/project.component';
+import { ProjectlistComponent } from './project/projectlist.component';
+import { ActivityLogComponent } from './activitylog/activitylog.component';
+import { ActivityLogListComponent } from './activitylog/activityloglist.component';
 
 
 export function myHttpLoader(http: HttpClient) {
@@ -166,7 +170,11 @@ export function myHttpLoader(http: HttpClient) {
     ReportlistComponent,
 
     InquiryComponent,
-    InquiryListComponent
+    InquiryListComponent,
+    ProjectComponent,
+    ProjectlistComponent,
+    ActivityLogComponent,
+    ActivityLogListComponent
   ],
   imports: [
     BrowserModule,

@@ -44,6 +44,10 @@ import { ReportComponent } from './report/report.component';
 import { ReportlistComponent } from './report/reportlist.component';
 import { InquiryComponent } from './inquiry/inquiry.component';
 import { InquiryListComponent } from './inquiry/inquirylist.component';
+import { ProjectComponent } from './project/project.component';
+import { ProjectlistComponent } from './project/projectlist.component';
+import { ActivityLogComponent } from './activitylog/activitylog.component';
+import { ActivityLogListComponent } from './activitylog/activityloglist.component';
 
 
 
@@ -57,6 +61,37 @@ const routes: Routes = [
         path: 'dashboard',
         component: DashboardComponent
     },
+
+    // ************ ACTIVITY LOG ************
+
+{
+  path: 'activitylog',
+  component: ActivityLogComponent
+},
+{
+  path: 'activitylog/:id',
+  component: ActivityLogComponent
+},
+{
+  path: 'activityloglist',
+  component: ActivityLogListComponent
+},
+    
+    // **** PROJECT ****
+
+{
+    path: 'project',
+    component: ProjectComponent
+},
+{
+    path: 'project/:id',
+    component: ProjectComponent
+},
+{
+    path: 'projectlist',
+    component: ProjectlistComponent
+},
+
 
     // **** INQUIRY ****
 
