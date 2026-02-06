@@ -44,6 +44,8 @@ import { ReportComponent } from './report/report.component';
 import { ReportlistComponent } from './report/reportlist.component';
 import { InquiryComponent } from './inquiry/inquiry.component';
 import { InquiryListComponent } from './inquiry/inquirylist.component';
+import { PageNotFoundComponent } from './page-not-found.component';
+
 
 
 
