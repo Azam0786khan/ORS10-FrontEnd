@@ -30,6 +30,8 @@
           },
           "configurations": {
             "production": {
+              "aot": false,
+              "buildOptimizer": false,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -41,10 +43,8 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -59,7 +59,6 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "P10-UI:build"
-            
           },
           "configurations": {
             "production": {
@@ -67,9 +66,6 @@
             }
           }
         },
-
-      
-        
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
