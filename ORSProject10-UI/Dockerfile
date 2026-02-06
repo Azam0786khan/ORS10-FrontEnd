@@ -1,17 +1,18 @@
-# Use a lightweight web server as the base image to serve your Angular app
+# Stage 1 — Build Angular App (Apple Silicon Compatible)
+# build stage
+# ---------- Runtime Stage ----------
 FROM nginx:alpine
 
-# Remove the default Nginx configuration
+# Remove default nginx config
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy the contents of your local 'dist' folder into the Nginx web server directory
-COPY dist/P10-UI /usr/share/nginx/html
+# Copy already-built Angular dist
+COPY dist/P10-UI/ /usr/share/nginx/html/
 
-# Expose the default Nginx port (usually port 80)
 EXPOSE 80
 
-# Start Nginx when the container is run
-CMD ["nginx", "-g", "daemon off;"]  
+CMD ["nginx", "-g", "daemon off;"]
+
 
 # # Use an official Node.js runtime as the base image
 # FROM node:14 as build
