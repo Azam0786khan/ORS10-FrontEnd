@@ -10,8 +10,6 @@ import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PageNotFoundComponent } from './page-not-found.component';
-
 
 /* ================= CORE / COMMON ================= */
 import { HttpServiceService } from './http-service.service';
@@ -112,7 +110,6 @@ export function myHttpLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent,
 
     NavbarComponent,
     FooterComponent,
