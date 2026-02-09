@@ -73,6 +73,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
 
+   { path: 'dashboard/myNav', redirectTo: 'dashboard', pathMatch: 'full' },
+
   // ===== ACTIVITY LOG =====
   { path: 'activitylog', component: ActivityLogComponent },
   { path: 'activitylog/:id', component: ActivityLogComponent },
