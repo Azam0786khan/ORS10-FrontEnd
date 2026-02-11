@@ -73,11 +73,6 @@ const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
 
-<<<<<<< HEAD
-
-=======
-   
->>>>>>> a26c0ae2c838d3e992b301504eaf8867bc5a150d
   // ===== ACTIVITY LOG =====
   { path: 'activitylog', component: ActivityLogComponent },
   { path: 'activitylog/:id', component: ActivityLogComponent },
@@ -113,7 +108,7 @@ const routes: Routes = [
   { path: 'product/:id', component: ProductComponent },
   { path: 'productlist', component: ProductListComponent },
 
-  // ===== AUTH / COMMON =====
+  // ===== AUTH =====
   { path: 'login', component: LoginComponent },
   { path: 'login/:userparams', component: LoginComponent },
   { path: 'forgotpassword', component: ForgotPasswordComponent },
@@ -176,11 +171,8 @@ const routes: Routes = [
   { path: 'subject/:id', component: SubjectComponent },
   { path: 'subjectlist', component: SubjectListComponent },
 
-<<<<<<< HEAD
  
-=======
-  
->>>>>>> a26c0ae2c838d3e992b301504eaf8867bc5a150d
+
 ];
 
 @NgModule({
