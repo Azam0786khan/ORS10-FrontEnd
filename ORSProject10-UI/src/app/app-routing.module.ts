@@ -73,6 +73,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
 
+
   // ===== ACTIVITY LOG =====
   { path: 'activitylog', component: ActivityLogComponent },
   { path: 'activitylog/:id', component: ActivityLogComponent },
@@ -171,11 +172,7 @@ const routes: Routes = [
   { path: 'subject/:id', component: SubjectComponent },
   { path: 'subjectlist', component: SubjectListComponent },
 
-  // ===== FILE =====
-  { path: 'file', component: FileComponent },
-
-  // ===== 404 (ALWAYS LAST) =====
-  { path: '**', component: PageNotFoundComponent }
+ 
 ];
 
 @NgModule({
