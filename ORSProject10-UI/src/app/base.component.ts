@@ -117,29 +117,45 @@ export class BaseCtl implements OnInit {
    * Searhs records 
    */
     search() {
-    console.log("search start")
-    var _self = this;
-    console.log("Search Form", _self.form.searchParams);
-    this.serviceLocator.httpService.post(_self.api.search + "/" + _self.form.pageNo, _self.form.searchParams, function (res) {
+      console.log("search start")
+      var _self = this;
 
+      this.serviceLocator.httpService.post(
+      _self.api.search + "/" + _self.form.pageNo,
+      _self.form.searchParams,
 
+      function (res, err) {
+
+      // 🔴 ERROR case (DB down / 503 / etc)
+      if (err) {
+        _self.form.message = err.message;
+        _self.form.error = true;     // ← THIS makes it red
+        return;
+      }
+
+      // ✅ SUCCESS case
       if (res.success) {
+
         _self.form.list = res.result.data;
         _self.nextList = res.result.nextList;
 
-        
         if (_self.form.list.length == 0) {
-          
-          _self.form.message = "No record found"; 
+          _self.form.message = "No record found";
           _self.form.error = true;
+        } else {
+          _self.form.message = "";
+          _self.form.error = false;
         }
-        console.log("List Size", _self.form.list.length);
+
       } else {
-        _self.form.error = false;
+        // business validation error from backend
         _self.form.message = res.result.message;
+        _self.form.error = true;   // also red
       }
-      console.log('FORM', _self.form);
-    });
+
+        console.log('FORM', _self.form);
+      }
+    );
   }
 
   searchOperation(operation: String) {
