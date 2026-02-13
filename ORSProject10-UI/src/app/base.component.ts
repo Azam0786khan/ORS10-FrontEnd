@@ -126,14 +126,14 @@ export class BaseCtl implements OnInit {
 
       function (res, err) {
 
-      // 🔴 ERROR case (DB down / 503 / etc)
+      
       if (err) {
         _self.form.message = err.message;
         _self.form.error = true;     // ← THIS makes it red
         return;
       }
 
-      // ✅ SUCCESS case
+      
       if (res.success) {
 
         _self.form.list = res.result.data;
@@ -237,30 +237,30 @@ export class BaseCtl implements OnInit {
       // 🔹 Reset messages
       _self.form.message = '';
       _self.form.inputerror = {};
-      _self.form.error = false;   // ✅ VERY IMPORTANT
+      _self.form.error = false;  
 
       console.log('response ===== > ', res);
 
       if (res.success) {
 
-        // ✅ SUCCESS = GREEN MESSAGE
+        
         _self.form.error = false;
 
-        // ✅ UPDATE vs SAVE message
+       
         if (_self.form.data.id && _self.form.data.id > 0) {
           _self.form.message = "Data updated successfully";
         } else {
           _self.form.message = "Data saved successfully";
         }
 
-        // ✅ Update id from backend response (if sent)
+       
         if (res.result && res.result.data) {
           _self.form.data.id = res.result.data;
         }
 
       } else {
 
-        // ❌ ERROR = RED MESSAGE
+        
         _self.form.error = true;
 
         if (res.result && res.result.inputerror) {
